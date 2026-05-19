@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import birthdaySong from './assets/birthday.mp3'
+import birthdaySong from '../assets/birthday.mp3'
 
 /* Generates a soft, emotional ambient pad using Web Audio API */
 function createAmbientMusic(ctx) {
