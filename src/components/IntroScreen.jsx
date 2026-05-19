@@ -100,7 +100,7 @@ export default function IntroScreen({ onOpen }) {
               letterSpacing: '0.03em',
             }}
           >
-            Mihed 💖
+            Hind 💖
           </span>
         </motion.div>
 
