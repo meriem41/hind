@@ -50,7 +50,7 @@ export default function LoadingScreen({ onDone }) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
       >
-        A Gift For Mihed
+        A Gift For Hind
       </motion.h2>
       <motion.p
         className="text-sm mb-10 opacity-50"
