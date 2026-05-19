@@ -45,35 +45,29 @@ function createAmbientMusic(ctx) {
 
   return { gainNode, oscillators }
 }
+import birthdaySong from './assets/birthday.mp3'
 
 export default function MusicPlayer() {
   const [playing, setPlaying] = useState(false)
   const [showHint, setShowHint] = useState(true)
-  const ctxRef = useRef(null)
-  const musicRef = useRef(null)
+  const audioRef = useRef(null)
 
   useEffect(() => {
+    audioRef.current = new Audio(birthdaySong)
+    audioRef.current.loop = true
     setTimeout(() => setShowHint(false), 4000)
   }, [])
 
-  const toggle = async () => {
-    if (!ctxRef.current) {
-      ctxRef.current = new (window.AudioContext || window.webkitAudioContext)()
-      musicRef.current = createAmbientMusic(ctxRef.current)
-    }
-    const ctx = ctxRef.current
-    if (ctx.state === 'suspended') await ctx.resume()
-
+  const toggle = () => {
     if (!playing) {
-      musicRef.current.gainNode.gain.cancelScheduledValues(ctx.currentTime)
-      musicRef.current.gainNode.gain.linearRampToValueAtTime(0.6, ctx.currentTime + 1.5)
+      audioRef.current.play()
     } else {
-      musicRef.current.gainNode.gain.cancelScheduledValues(ctx.currentTime)
-      musicRef.current.gainNode.gain.linearRampToValueAtTime(0, ctx.currentTime + 1.5)
+      audioRef.current.pause()
     }
     setPlaying(p => !p)
     setShowHint(false)
   }
+ 
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
