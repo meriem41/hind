@@ -21,13 +21,13 @@ function useTypewriter(text, speed = 28, active = true) {
 }
 
 const LETTER_PARAGRAPHS = [
-  `Dear Mihed,`,
+  `Dear Hind,`,
   `There are people who come into your life like a soft light — quiet, steady, and impossibly warm. You are that light. On this day that the universe decided to gift the world with you, I just want you to know how endlessly grateful I am.`,
   `You have a way of making ordinary moments feel like something out of a dream. Your laughter is contagious, your kindness is rare, and your heart is one of the most beautiful things I've ever known. The world simply shines brighter because you exist in it.`,
   `So today, I want to celebrate YOU. Not just the birthday, but every version of you — the strong one, the silly one, the dreaming one. You deserve every flower, every star, every piece of magic the world has to offer.`,
   `May this year bring you everything you've been quietly hoping for. May you be surprised by joy, held by love, and reminded every single day that you matter more than words can ever say.`,
   `With all the love my heart can hold,`,
-  `Your bestie Meriem, always. 💖`,
+  `Your bestie Rayene, always. 💖`,
 ]
 
 export default function BirthdayLetter({ visible }) {
