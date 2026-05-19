@@ -49,7 +49,7 @@ export default function App() {
           <SurpriseSection />
           <footer style={{ textAlign:'center', padding:'2rem', borderTop:'1px solid rgba(255,255,255,0.06)' }}>
             <p style={{ fontFamily:'"Cormorant Garamond", serif', color:'rgba(255,255,255,0.2)', fontSize:'0.85rem', letterSpacing:'0.15em' }}>
-              Made with ❤️ · For Mihed · {new Date().getFullYear()}
+              Made with ❤️ · For Hind · {new Date().getFullYear()}
             </p>
           </footer>
         </div>
