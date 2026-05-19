@@ -169,7 +169,7 @@ export default function SurpriseSection() {
           className="mt-16"
         >
           <p style={{ fontFamily: '"Dancing Script", cursive', fontSize: '2rem', color: '#f9c784', textShadow: '0 0 20px rgba(249,199,132,0.6)' }}>
-            Happy Birthday, Mihed! 🎂✨
+            Happy Birthday, Hind! 🎂✨
           </p>
           <p style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: '0.9rem', color: 'rgba(255,255,255,0.25)', marginTop: 12, letterSpacing: '0.15em' }}>
             MADE WITH LOVE · JUST FOR YOU
