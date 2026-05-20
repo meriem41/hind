@@ -58,15 +58,21 @@ export default function MusicPlayer() {
     setTimeout(() => setShowHint(false), 4000)
   }, [])
 
-  const toggle = () => {
-    if (!playing) {
-      audioRef.current.play()
-    } else {
-      audioRef.current.pause()
+  const toggle = async () => {
+  if (!playing) {
+    try {
+      await audioRef.current.play()
+      setPlaying(true)
+    } catch (err) {
+      console.error('Playback failed:', err)
+      // Don't set playing=true if it failed
     }
-    setPlaying(p => !p)
-    setShowHint(false)
+  } else {
+    audioRef.current.pause()
+    setPlaying(false)
   }
+  setShowHint(false)
+}
  
 
   return (
